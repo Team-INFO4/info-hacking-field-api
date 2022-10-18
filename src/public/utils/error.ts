@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express"
-import httpError, { HttpError } from "http-errors"
+import createError, { HttpError } from "http-errors"
 import { HTTP_CODE, HTTP_MESSAGE } from "../constants/http"
 
 export const errorHandler = (
@@ -8,15 +8,24 @@ export const errorHandler = (
   res: Response,
   _next: NextFunction,
 ) => {
-  if (httpError.isHttpError(error)) {
-    if (error.statusCode >= HTTP_CODE.SERVER_ERROR) {
+  if (createError.isHttpError(error)) {
+    if (error.statusCode >= 500) {
+      console.log(error)
     } else {
+      console.log(error)
       res.statusCode = error.statusCode
       res.json({
-        type: HTTP_MESSAGE.SERVER_ERROR,
+        type: error.name,
         message: error.message,
-        description: "잠시 후 다시 시도해주세요.",
+        description: error.description,
       })
     }
+  } else {
+    console.log(error)
+    res.statusCode = HTTP_CODE.SERVER_ERROR
+    res.json({
+      message: error.message,
+      description: "다시 한번 시도해주세요.",
+    })
   }
 }
