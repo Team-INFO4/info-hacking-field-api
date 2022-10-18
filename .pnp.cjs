@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cors", "npm:2.8.12"],\
             ["@types/express", "npm:4.17.14"],\
             ["@types/express-pino-logger", "npm:4.0.3"],\
+            ["@types/express-rate-limit", "npm:6.0.0"],\
             ["@types/express-useragent", "npm:1.0.2"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/http-errors", "npm:1.8.2"],\
@@ -44,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
             ["express-pino-logger", "npm:7.0.0"],\
+            ["express-rate-limit", "virtual:b35cb6f59325fb57047d0b8de7b91b44a36e45380eb07084ad313fd8baea51d3598c0848def89abd0caec2fb12d7951bc9a17c53bb9b56435f4d93cf14ce5c7e#npm:6.6.0"],\
             ["express-useragent", "npm:1.0.15"],\
             ["express-validator", "npm:6.14.2"],\
             ["helmet", "npm:6.0.0"],\
@@ -1412,6 +1414,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express-pino-logger", "npm:4.0.3"],\
             ["@types/pino", "npm:6.3.12"],\
             ["@types/pino-http", "npm:5.8.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/express-rate-limit", [\
+        ["npm:6.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-express-rate-limit-npm-6.0.0-da56c22a5b-fde7ba3408.zip/node_modules/@types/express-rate-limit/",\
+          "packageDependencies": [\
+            ["@types/express-rate-limit", "npm:6.0.0"],\
+            ["express-rate-limit", "virtual:da56c22a5b51f24d790323236182a5f4b1e3b9d1e66f0863a0b47b02c2c88b4a1cf7a09ae88446054dfd1228d4b4b50c3004559b2de24ab63ea6fdec5a485a5a#npm:6.6.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2941,6 +2953,41 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["express-rate-limit", [\
+        ["npm:6.6.0", {\
+          "packageLocation": "./.yarn/cache/express-rate-limit-npm-6.6.0-d57a9b2fe2-056e26c30a.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "npm:6.6.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:b35cb6f59325fb57047d0b8de7b91b44a36e45380eb07084ad313fd8baea51d3598c0848def89abd0caec2fb12d7951bc9a17c53bb9b56435f4d93cf14ce5c7e#npm:6.6.0", {\
+          "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-5a351dc772/0/cache/express-rate-limit-npm-6.6.0-d57a9b2fe2-056e26c30a.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "virtual:b35cb6f59325fb57047d0b8de7b91b44a36e45380eb07084ad313fd8baea51d3598c0848def89abd0caec2fb12d7951bc9a17c53bb9b56435f4d93cf14ce5c7e#npm:6.6.0"],\
+            ["@types/express", "npm:4.17.14"],\
+            ["express", "npm:4.18.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/express",\
+            "express"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:da56c22a5b51f24d790323236182a5f4b1e3b9d1e66f0863a0b47b02c2c88b4a1cf7a09ae88446054dfd1228d4b4b50c3004559b2de24ab63ea6fdec5a485a5a#npm:6.6.0", {\
+          "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-f8ff8220ac/0/cache/express-rate-limit-npm-6.6.0-d57a9b2fe2-056e26c30a.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "virtual:da56c22a5b51f24d790323236182a5f4b1e3b9d1e66f0863a0b47b02c2c88b4a1cf7a09ae88446054dfd1228d4b4b50c3004559b2de24ab63ea6fdec5a485a5a#npm:6.6.0"],\
+            ["@types/express", null],\
+            ["express", null]\
+          ],\
+          "packagePeers": [\
+            "@types/express",\
+            "express"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["express-useragent", [\
         ["npm:1.0.15", {\
           "packageLocation": "./.yarn/cache/express-useragent-npm-1.0.15-1f1b3c8d77-7013e35565.zip/node_modules/express-useragent/",\
@@ -3452,6 +3499,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cors", "npm:2.8.12"],\
             ["@types/express", "npm:4.17.14"],\
             ["@types/express-pino-logger", "npm:4.0.3"],\
+            ["@types/express-rate-limit", "npm:6.0.0"],\
             ["@types/express-useragent", "npm:1.0.2"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/http-errors", "npm:1.8.2"],\
@@ -3465,6 +3513,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
             ["express-pino-logger", "npm:7.0.0"],\
+            ["express-rate-limit", "virtual:b35cb6f59325fb57047d0b8de7b91b44a36e45380eb07084ad313fd8baea51d3598c0848def89abd0caec2fb12d7951bc9a17c53bb9b56435f4d93cf14ce5c7e#npm:6.6.0"],\
             ["express-useragent", "npm:1.0.15"],\
             ["express-validator", "npm:6.14.2"],\
             ["helmet", "npm:6.0.0"],\

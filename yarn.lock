@@ -901,6 +901,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/express-rate-limit@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@types/express-rate-limit@npm:6.0.0"
+  dependencies:
+    express-rate-limit: "*"
+  checksum: fde7ba340887a0862cd8abc1ff1dcba18b8d5eeddddfde5a6c35d3a97cc80b8a3c1d6ce42bbc4085643f62b01a90e44533f764d388e44ee39f893b5207b17407
+  languageName: node
+  linkType: hard
+
 "@types/express-serve-static-core@npm:^4.17.18":
   version: 4.17.31
   resolution: "@types/express-serve-static-core@npm:4.17.31"
@@ -2135,6 +2144,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"express-rate-limit@npm:*, express-rate-limit@npm:^6.6.0":
+  version: 6.6.0
+  resolution: "express-rate-limit@npm:6.6.0"
+  peerDependencies:
+    express: ^4 || ^5
+  checksum: 056e26c30af5eb3904036e6bb912fe485cf2e23eb21e3bb500f0c165fba5ffe0eebc94991b25f1457f78c25185c282a26f2a1dfce0ec3245f7ee2eb5c954ef99
+  languageName: node
+  linkType: hard
+
 "express-useragent@npm:^1.0.15":
   version: 1.0.15
   resolution: "express-useragent@npm:1.0.15"
@@ -2625,6 +2643,7 @@ __metadata:
     "@types/cors": ^2.8.12
     "@types/express": ^4.17.14
     "@types/express-pino-logger": ^4.0.3
+    "@types/express-rate-limit": ^6.0.0
     "@types/express-useragent": ^1.0.2
     "@types/helmet": ^4.0.0
     "@types/http-errors": ^1.8.2
@@ -2638,6 +2657,7 @@ __metadata:
     dotenv: ^16.0.3
     express: ^4.18.2
     express-pino-logger: ^7.0.0
+    express-rate-limit: ^6.6.0
     express-useragent: ^1.0.15
     express-validator: ^6.14.2
     helmet: ^6.0.0
