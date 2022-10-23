@@ -1,5 +1,5 @@
-import http from "http"
-import { settingServer } from "./setting"
+import http from 'http'
+import { settingServer } from './setting'
 
 const startServer = () => {
   try {

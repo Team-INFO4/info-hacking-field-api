@@ -1,7 +1,7 @@
-import rateLimit from "express-rate-limit"
-import { HTTP_MESSAGE } from "../constants/http"
+import rateLimit from 'express-rate-limit'
+import { HTTP_MESSAGE } from '../constants/http'
 
-export const okJson = { message: "ok" }
+export const okJson = { message: 'ok' }
 
 export const limiter = () => {
   return rateLimit({

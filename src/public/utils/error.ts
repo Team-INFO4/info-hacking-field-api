@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from "express"
-import createError, { HttpError } from "http-errors"
-import { HTTP_CODE, HTTP_MESSAGE } from "../constants/http"
+import { NextFunction, Request, Response } from 'express'
+import createError, { HttpError } from 'http-errors'
+import { HTTP_CODE, HTTP_MESSAGE } from '../constants/http'
 
 export const errorHandler = (
   error: Error | HttpError,
@@ -25,7 +25,7 @@ export const errorHandler = (
     res.statusCode = HTTP_CODE.SERVER_ERROR
     res.json({
       message: error.message,
-      description: "다시 한번 시도해주세요.",
+      description: '다시 한번 시도해주세요.',
     })
   }
 }

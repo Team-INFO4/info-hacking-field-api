@@ -1,11 +1,11 @@
-import { NextFunction, Request, Response, Router } from "express"
-import { getLiveness, getReadiness } from "../services/healthz"
+import { NextFunction, Request, Response, Router } from 'express'
+import { getLiveness, getReadiness } from '../services/healthz'
 
-const url = "/healthz"
+const url = '/healthz'
 const router = Router()
 
 router.get(
-  "/readiness",
+  '/readiness',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const data = getReadiness()
@@ -17,7 +17,7 @@ router.get(
 )
 
 router.get(
-  "/liveness",
+  '/liveness',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const data = getLiveness()

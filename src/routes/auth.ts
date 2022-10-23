@@ -1,11 +1,11 @@
-import { NextFunction, Request, Response, Router } from "express"
-import { okJson } from "../public/utils/express"
+import { NextFunction, Request, Response, Router } from 'express'
+import { okJson } from '../public/utils/express'
 
-const url = "/auth"
+const url = '/auth'
 const router = Router()
 
 router.post(
-  "/sign-in",
+  '/sign-in',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       res.json(okJson)
@@ -16,7 +16,7 @@ router.post(
 )
 
 router.post(
-  "/sign-up",
+  '/sign-up',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       res.json(okJson)
@@ -27,7 +27,7 @@ router.post(
 )
 
 router.post(
-  "/sign-out",
+  '/sign-out',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       res.json(okJson)
@@ -38,7 +38,7 @@ router.post(
 )
 
 router.get(
-  "/sign-down",
+  '/sign-down',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       res.json(okJson)
@@ -49,7 +49,7 @@ router.get(
 )
 
 router.get(
-  "/send-code",
+  '/send-code',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       res.json(okJson)
@@ -60,7 +60,7 @@ router.get(
 )
 
 router.get(
-  "/verify-code",
+  '/verify-code',
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       res.json(okJson)
