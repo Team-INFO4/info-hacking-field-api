@@ -5,6 +5,7 @@ import express from 'express'
 import routes from './routes'
 // import pino from 'express-pino-logger'
 import { limiter } from './public/utils/express'
+import { errorHandler } from './public/utils/error'
 
 export const settingServer = () => {
   const expressServer = express()
@@ -20,6 +21,8 @@ export const settingServer = () => {
   for (const { url, router } of routes) {
     expressServer.use(url, router)
   }
+
+  expressServer.use(errorHandler)
 
   return expressServer
 }

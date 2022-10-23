@@ -7,6 +7,6 @@ export const limiter = () => {
   return rateLimit({
     max: 1,
     windowMs: 1000,
-    message: { error: HTTP_MESSAGE.TOO_MANY_REQUEST },
+    message: { error: { message: HTTP_MESSAGE.TOO_MANY_REQUEST } },
   })
 }

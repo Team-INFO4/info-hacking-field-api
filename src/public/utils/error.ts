@@ -8,24 +8,15 @@ export const errorHandler = (
   res: Response,
   _next: NextFunction,
 ) => {
+  const message = error.message
+
+  console.log(error)
+
   if (createError.isHttpError(error)) {
-    if (error.statusCode >= 500) {
-      console.log(error)
-    } else {
-      console.log(error)
-      res.statusCode = error.statusCode
-      res.json({
-        type: error.name,
-        message: error.message,
-        description: error.description,
-      })
-    }
+    res.statusCode = error.statusCode
   } else {
-    console.log(error)
     res.statusCode = HTTP_CODE.SERVER_ERROR
-    res.json({
-      message: error.message,
-      description: '다시 한번 시도해주세요.',
-    })
   }
+
+  res.json({ error: { message } })
 }
