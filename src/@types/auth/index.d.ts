@@ -7,4 +7,6 @@ declare module 'auth' {
   >
 
   type SignInPayload = Pick<HackingField.User, 'password' | 'email' | 'type'>
+
+  type JwtPayload = Pick<HackingField.User, 'id' | 'email' | 'name' | 'type'>
 }
