@@ -1,4 +1,3 @@
-import { HackingField } from '@team-info4/info-models'
 import crypto from 'crypto'
 import jwt, { JwtPayload } from 'jsonwebtoken'
 
