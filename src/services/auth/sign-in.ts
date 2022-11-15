@@ -25,6 +25,10 @@ export const signIn = async (payload: SignInPayload) => {
     )
   }
 
+  if (user.type !== type) {
+    throw new createHttpError.Forbidden('잘못된 로그인 방식입니다.')
+  }
+
   const accessToken = signAccessJwt(user)
   const refreshToken = signRefreshJwt(accessToken)
 
